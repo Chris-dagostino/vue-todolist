@@ -16,12 +16,12 @@
             <div class="container" >
                 <div class="row" >
                     <h1>TO DO LIST</h1>
-                    <input type="text" placeholder="to do..." 
+                    <input type="text" placeholder="whrite here..." 
                         @keyup.enter="addText"
                         v-model="text"           
                     >
 
-                    <button @click="addText(add)" >aggiungi</button>
+                    <button @click="addText" >aggiungi</button>
                 </div>
             </div>
 
@@ -34,8 +34,8 @@
                 <div class="row" >
                     <div class="todo_list" >
                         <ul>
-                            <li>
-                                {{text}}<i @click="removeText(index)"  class="fas fa-times"></i>
+                            <li v-for="(item,index) in todolist" >
+                                {{item.text}}<i @click="removeText(index)"  class="fas fa-times"></i>
                             </li>
                         </ul>
 

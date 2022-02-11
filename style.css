@@ -50,5 +50,15 @@ li{
     width: 50%;
     margin: auto;
     list-style-type: none;
-    background-color: lightgray;
+    font-size: 30px;
+    vertical-align: middle;
+    border-bottom: 2px solid #000;
+}
+
+li i {
+    float: right;
+}
+
+span{
+    float: left;
 }

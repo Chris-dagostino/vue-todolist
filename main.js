@@ -1,16 +1,21 @@
 const vue = new  Vue ({
     el:'#app',
     data:{
-        text: ''
+        text: '',
+        todolist:[]
 
     },
     methods:{
-        addText (add){
-            this.text = "";
+        addText (){
+            const newtodoObject = {
+                text: this.text,
+                done: false              
+            }           
+            this.todolist.push(newtodoObject)
+            this.text="";
         },
         removeText (index){
-            this.text.splice(index,1);
-            this.text="";
+            this.todolist.splice(index,1);          
         }
     }    
 }); 
